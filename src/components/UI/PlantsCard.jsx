@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const PlantsCard = ({ state: { image, title, price, old_price, id } }) => {
   return (
-    <div className="card min-w-[260px] h-[366px] rounded-lg hover:shadow-lg duration-150">
+    <div className="plants_card min-w-[260px] h-[366px] rounded-lg hover:shadow-lg duration-150">
       <img className="min-w-[260px] min-h-[260px]" src={image} alt="card_img" />
       <div className="flex flex-col mt-5 items-left w-full px-[10px]">
         <Link to={`/plants/${id}`} className="text-[18px] mb-2" href="#">

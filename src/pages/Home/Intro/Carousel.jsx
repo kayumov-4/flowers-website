@@ -31,7 +31,7 @@ export default function Carousel() {
         mousewheel={true}
         keyboard={true}
         modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
-        className="mySwiper mt-10"
+        className="mySwiper "
       >
         <SwiperSlide className="slide_img">
           <div className="pl-20 pt-[43px]">

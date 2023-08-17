@@ -73,7 +73,7 @@ const index = ({ title }) => {
         className="wrapper_carousel h-[370px] flex gap-10 transition duration-500 "
         style={wrapperStyle}
       >
-        {newFlowers.map((flower, index) => {
+        {newFlowers.slice(0, 10).map((flower, index) => {
           return <Card state={flower} key={index} />;
         })}
       </div>

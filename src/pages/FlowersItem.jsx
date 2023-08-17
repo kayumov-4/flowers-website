@@ -11,6 +11,7 @@ import Breadcrumbs from "../components/UI/BreadCrumb";
 import NewFlowers from "./Home/NewFlowers/NewFlowers";
 import { useParams } from "react-router-dom";
 import data from "../db";
+import Accordion from "../components/UI/Accordion";
 
 const FlowersItem = () => {
   const [counter, setCounter] = useState(0);
@@ -50,7 +51,7 @@ const FlowersItem = () => {
   return (
     <div className="container">
       <div className="h-[52px] mt-[10px] mb-[25px] flex items-center justify-start">
-        <Breadcrumbs />
+        <Breadcrumbs title={selectedItem.title} />
       </div>
       <div className="flex mb-[160px]">
         <div className="left flex flex-col mr-[72px]  min-w-[568px]">
@@ -137,20 +138,7 @@ const FlowersItem = () => {
             </button>
           </div>
           <div>
-            <button className="flex w-full items-center justify-between border-b-2 h-[58px]">
-              <p className="font-[Regular] text-[14px]">Bouquet contents</p>
-              <img src={plus} alt="" />
-            </button>
-            <button className="flex w-full items-center justify-between border-b-2 h-[58px]">
-              <p className="font-[Regular] text-[14px]">Details</p>
-              <img src={plus} alt="" />
-            </button>
-            <button className="flex w-full items-center justify-between border-b-2 h-[58px]">
-              <p className="font-[Regular] text-[14px]">
-                Delivery & Pay policy
-              </p>
-              <img src={plus} alt="" />
-            </button>
+            <Accordion />
           </div>
         </div>
       </div>

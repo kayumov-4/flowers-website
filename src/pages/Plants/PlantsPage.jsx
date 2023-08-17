@@ -12,12 +12,15 @@ const index = () => {
         <Breadcrumbs />
       </div>
       <h1 className="text-[32px] mt-5">All Plants</h1>
-      <div className="dropdowns flex gap-20 mt-10 mb-5">
-        <DropDownUi title={"Sort by"} />
-        <DropDownUi title={"Color"} />
-        <DropDownUi title={"Price"} />
-        <DropDownUi title={"Flower type"} />
-        <DropDownUi title={"Occasion"} />
+      <div className="flex items-center justify-between">
+        <div className="dropdowns flex gap-20 mt-10 mb-5">
+          <DropDownUi title={"Sort by"} />
+          <DropDownUi title={"Color"} />
+          <DropDownUi title={"Price"} />
+          <DropDownUi title={"Flower type"} />
+          <DropDownUi title={"Occasion"} />
+        </div>
+        <h2 className="mt-4">{allPlants.length} items</h2>
       </div>
       <hr className="mb-10" />
       <div className="wrapper flex flex-wrap gap-10 pb-10">

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "../../../db";
 import Card from "../../../components/UI/Card";
 const index = () => {
-  const { relevantFlowers } = data;
+  const { newFlowers } = data;
   const [counter, setCounter] = useState(0);
   const wrapperStyle = {
     transform: `translateX(-${counter * 300}px)`,
@@ -11,7 +11,7 @@ const index = () => {
   const prevSlide = () => {
     const wrapper = document.querySelector(".wrapper_carousel");
     setCounter((prevCounter) =>
-      prevCounter === 0 ? relevantFlowers.length - 1 : prevCounter - 1
+      prevCounter === 0 ? newFlowers.length - 1 : prevCounter - 1
     );
     if (counter == 0) {
       setCounter(0);
@@ -22,7 +22,7 @@ const index = () => {
   const nextSlide = () => {
     const wrapper = document.querySelector(".wrapper_carousel");
     setCounter((prevCounter) =>
-      prevCounter === relevantFlowers.length - 1 ? 0 : prevCounter + 1
+      prevCounter === newFlowers.length - 1 ? 0 : prevCounter + 1
     );
     wrapper.classList.add(`translate-x-[-${counter * 300}px]`);
     if (counter == 4) {
@@ -71,7 +71,7 @@ const index = () => {
         className="wrapper_carousel flex gap-10 duration-500 transform"
         style={wrapperStyle}
       >
-        {relevantFlowers.map((flower, index) => {
+        {newFlowers.slice(10).map((flower, index) => {
           return <Card state={flower} key={index} />;
         })}
       </div>

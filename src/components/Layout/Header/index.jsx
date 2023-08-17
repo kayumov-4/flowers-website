@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import "./style.scss";
 const index = () => {
   return (
-    <header>
+    <header className="w-full fixed bg-white z-10 top-0">
       <div className="container mx-auto">
         <HeaderTop />
         <Navbar />

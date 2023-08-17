@@ -7,7 +7,7 @@ import "./style.scss";
 import Breadcrumbs from "../../components/UI/BreadCrumb";
 // import required modules
 const index = () => {
-  const { newFlowers, relevantFlowers } = data;
+  const { newFlowers } = data;
   const [counter, setCounter] = useState(0);
   const [counter2, setCounter2] = useState(0);
 
@@ -43,7 +43,7 @@ const index = () => {
   const prevSlide2 = () => {
     const wrapper2 = document.querySelector(".revelant_carousel");
     setCounter2((prevCounter2) =>
-      prevCounter2 === 0 ? relevantFlowers.length - 1 : prevCounter2 - 1
+      prevCounter2 === 0 ? newFlowers.length - 1 : prevCounter2 - 1
     );
     if (counter2 == 0) {
       setCounter2(0);
@@ -54,7 +54,7 @@ const index = () => {
   const nextSlide2 = () => {
     const wrapper2 = document.querySelector(".revelant_carousel");
     setCounter2((prevCounter2) =>
-      prevCounter2 === relevantFlowers.length - 1 ? 0 : prevCounter2 + 1
+      prevCounter2 === newFlowers.length - 1 ? 0 : prevCounter2 + 1
     );
     if (counter2 == 4) {
       setCounter2(0);
@@ -64,9 +64,6 @@ const index = () => {
 
   return (
     <div className="container mx-auto overflow-x-hidden">
-      <div className="h-[52px]  flex items-center justify-start">
-        <Breadcrumbs />
-      </div>
       <div className="wrapper">
         <Carousel autoplay={10000}>
           <div className="h-[482px] pl-[100px] flowers_banner">
@@ -139,7 +136,7 @@ const index = () => {
         className="new_carousel flex gap-10 duration-500 "
         style={wrapperStyle}
       >
-        {newFlowers.map((flower, index) => {
+        {newFlowers.slice(0, 9).map((flower, index) => {
           return <Card state={flower} key={index} />;
         })}
       </div>
@@ -190,7 +187,7 @@ const index = () => {
         className="revelant_carousel flex gap-10 mb-[100px] duration-500"
         style={wrapperStyle2}
       >
-        {relevantFlowers.map((flower, index) => {
+        {newFlowers.slice(8).map((flower, index) => {
           return <Card state={flower} key={index} />;
         })}
       </div>
