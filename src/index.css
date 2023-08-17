@@ -50,10 +50,3 @@ a:hover {
 .active {
   color: #d0cdcd;
 }
-
-.card:hover {
-  .btn {
-    transition-duration: 10s;
-    display: flex;
-  }
-}

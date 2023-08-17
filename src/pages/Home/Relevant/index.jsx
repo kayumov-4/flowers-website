@@ -68,7 +68,7 @@ const index = () => {
         </div>
       </div>
       <div
-        className="wrapper_carousel flex gap-10 duration-500 transform"
+        className="wrapper_carousel flex gap-10 duration-500 transform h-[370px]"
         style={wrapperStyle}
       >
         {newFlowers.slice(10).map((flower, index) => {

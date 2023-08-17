@@ -19,7 +19,7 @@ const Breadcrumbs = ({ title }) => {
         return isLast ? (
           <div className="flex items-center gap-3 h-10">
             <span key={name}>/</span>
-            <p className="ml-2">{title}</p>
+            <p className="ml-2">{newCap.length > 3 ? newCap : title}</p>
           </div>
         ) : (
           <div className="flex items-center ">

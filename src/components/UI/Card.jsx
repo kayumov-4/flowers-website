@@ -5,23 +5,8 @@ const Card = ({ state: { image, title, price, old_price, id } }) => {
   const [btnState, setBtnState] = useState(false);
   const [first, setFirst] = useState(false);
   const [first1, setFirst1] = useState(false);
-
-  // function btnFunc() {
-  //   const svg = document.querySelector(".hoverSvg");
-  //   const check = document.querySelector(".bx-check");
-  //   svg.classList.add("hidden");
-  //   check.classList.remove("hidden");
-  //   check.classList.add("block");
-  // }
-  // function btnFunc1() {
-  //   const svg = document.querySelector(".hoverSvg1");
-  //   const check = document.querySelector(".box");
-  //   svg.classList.add("hidden");
-  //   check.classList.remove("hidden");
-  //   check.classList.add("block");
-  // }
   return (
-    <div className="card min-w-[260px] h-[366px] rounded-lg hover:shadow-lg duration-150 relative hover:">
+    <div className="card min-w-[260px] h-[366px] rounded-lg hover:shadow-lg duration-150 relative">
       <img className="min-w-[260px] min-h-[260px]" src={image} alt="card_img" />
       {btnState ? null : (
         <button
